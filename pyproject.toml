@@ -1,0 +1,25 @@
+[project]
+name = "rafal"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "anand2312", email = "40204976+anand2312@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "polars>=1.33.0",
+]
+
+[project.scripts]
+rafal = "rafal:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "ruff>=0.12.11",
+]

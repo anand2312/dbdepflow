@@ -1,0 +1,22 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: ruff format
+        entry: uv
+        args: [run, ruff, format]
+        language: system
+        types: [python]
+
+      - id: ruff-check-fix
+        name: ruff check with fix
+        entry: uv
+        args: [run, ruff, check, --fix]
+        language: system
+        types: [python]
+      - id: ruff-isort
+        name: isort, using ruff
+        entry: uv
+        args: [run, ruff, check, --select, I, --fix]
+        language: system
+        types: [python]

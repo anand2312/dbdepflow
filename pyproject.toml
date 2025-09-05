@@ -7,7 +7,9 @@ authors = [
     { name = "anand2312", email = "40204976+anand2312@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "neo4j>=5.28.2",
+]
 
 [project.scripts]
 rafal = "rafal:main"

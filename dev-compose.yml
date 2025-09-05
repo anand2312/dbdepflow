@@ -1,0 +1,26 @@
+services:
+  oracledb:
+    image: gvenzl/oracle-free:full
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PASSWORD=admin # Password for SYSTEM user
+      - APP_USER=rafal
+      - APP_USER_PASSWORD=rafal
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+      start_interval: 5s
+    volumes:
+      - ./init-db-scripts:/container-entrypoint-initdb.d:ro
+
+  neo4j:
+    image: neo4j:5
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/adminadmin

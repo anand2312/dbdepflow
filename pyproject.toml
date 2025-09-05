@@ -1,5 +1,5 @@
 [project]
-name = "rafal"
+name = "dbdepflow"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,9 +10,6 @@ requires-python = ">=3.12"
 dependencies = [
     "neo4j>=5.28.2",
 ]
-
-[project.scripts]
-rafal = "rafal:main"
 
 [project.optional-dependencies]
 oracle = [

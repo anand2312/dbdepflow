@@ -3,7 +3,7 @@ import asyncio
 import neo4j
 import oracledb
 
-from rafal.oracle.load import build_neo4j_graph, load_dependencies
+from dbdepflow.oracle.load import build_neo4j_graph, load_dependencies
 
 
 async def main() -> None:

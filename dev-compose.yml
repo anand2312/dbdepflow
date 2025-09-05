@@ -5,8 +5,8 @@ services:
       - "1521:1521"
     environment:
       - ORACLE_PASSWORD=admin # Password for SYSTEM user
-      - APP_USER=rafal
-      - APP_USER_PASSWORD=rafal
+      - APP_USER=dbdepflow
+      - APP_USER_PASSWORD=dbdepflow
     healthcheck:
       test: ["CMD", "healthcheck.sh"]
       interval: 10s
